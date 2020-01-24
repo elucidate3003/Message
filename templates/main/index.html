@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+<title>Meme</title>
+{% block style %}
+<style>
+*{
+    background:black;
+    color:white;
+}
+div img{
+    height : 300px;
+    width : 250px;
+}
+</style>{% endblock style %}
+</head>
+<body>
+    <h1>Tadaa</h1>
+{% block content %}
+<div>
+{% for title in titles %}
+{% if title.image %}
+<img src={% static 'image\science.jpg' %} alt=""> 
+{% endif %}
+<a href="{% url 'content' %}"><h3>{{title.caption}}</h3></a>
+
+{% endfor %}
+</div>
+{% endblock content %}
+</body>
+</html>

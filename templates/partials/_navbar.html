@@ -1,0 +1,36 @@
+{% load static %}
+{% block style %}
+<style>
+li{
+    background:#bbe3b1;
+}
+.menu ul{
+    font-size:20px;
+    color:#f5206a;
+    
+}
+.menu ul li a{
+    color:#f5206a;
+    font-weight:bold;
+    background:#bbe3b1;
+}
+</style>
+{% endblock style %}
+
+<nav>
+<div class="d-flex">
+ <span class="logo"><h2><i class="" aria-hidden="true">&nbsp;Asylum!!!</h2></i></span>
+
+    <div class="menu ">
+        <ul class="nav ">
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %} ">
+            Home</a> &nbsp;
+            <a class="nav-link" href="{% url 'content' %} ">
+            About</a></li>
+            
+            
+        </ul>
+    </div>
+</div>
+</nav>

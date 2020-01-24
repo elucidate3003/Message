@@ -1,0 +1,31 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    {% block style %}
+    <style>*{
+        background:#21211f;
+        color:white;
+    }</style>
+    {% endblock style %}
+</head>
+
+<body>
+<div class="container-fluid">
+
+{% include "partials/_navbar.html" %}
+{% block content %}
+
+
+
+{% endblock content %}
+</div>
+</body>
+{% include "partials/_footer.html" %}    
+</html>

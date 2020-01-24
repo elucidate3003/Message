@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="block">
+    {% for meme in memes %}
+      <h3>Username : {{meme.user}}</h3>
+       <h4>Message : {{meme.message}}</h4>
+       {% if meme.photo %}
+        <img src="{{meme.photo.url}}"> 
+       {% endif %}
+       <hr> 
+    {% endfor %}
+    </div>
+{% endblock content %}
+
